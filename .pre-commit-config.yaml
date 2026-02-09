@@ -64,23 +64,3 @@ repos:
     hooks:
       - id: pycln
         args: [--all]
-#
-#  - repo: https://github.com/PyCQA/docformatter
-#    rev: v1.7.5
-#    hooks:
-#      - id: docformatter
-
-#  - repo: https://github.com/asottile/yesqa
-#    rev: v1.4.0
-#    hooks:
-#      - id: yesqa
-
-#  - repo: https://github.com/asottile/dead
-#    rev: v1.5.0
-#    hooks:
-#    -   id: dead
-
-#  - repo: https://github.com/ultralytics/pre-commit
-#    rev: bd60a414f80a53fb8f593d3bfed4701fc47e4b23
-#    hooks:
-#      - id: capitalize-comments
