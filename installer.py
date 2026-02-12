@@ -32,7 +32,11 @@ def is_raspberry_pi():
 
 def run(cmd):
     print(f"> {cmd}")
-    subprocess.check_call(cmd, shell=True)
+    try:
+        subprocess.check_call(cmd, shell=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Command failed: {cmd}")
+        print("Going to next step...\n")
 
 pi = is_raspberry_pi()
 
@@ -51,9 +55,9 @@ for pkg, req_version in requirements.items():
 print("\nInstalling dependencies (if any)\n")
 
 if pi:
-    print("Raspberry Pi detected...")
+    print("Raspberry Pi detected...\n")
     run("pip install onnxruntime opencv-python numpy huggingface-hub")
 else:
-    print("Not Raspberry PI")
+    print("Not Raspberry PI\n")
     run("pip install -r requirements.txt")
     run("pip install -e .")
