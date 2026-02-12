@@ -1,15 +1,11 @@
-import importlib
 from importlib.metadata import version, PackageNotFoundError
-import platform
 import subprocess
-import sys
-
 
 requirements = {
-    "torch": "2.0.1",
-    "torchvision": "0.15.2",
+    "torch": "2.9.0",
+    "torchvision": "0.24.0",
     "onnx": "1.14.0",
-    "onnxruntime": "1.15.1",
+    "onnxruntime": "1.21.0",
     "pycocotools": "2.0.7",
     "PyYAML": "6.0.1",
     "scipy": "1.13.0",
